@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import TelInfo from "./TelInfo";
 
 class TelInfoList extends Component {
     static defaultProps = {
@@ -12,9 +13,11 @@ class TelInfoList extends Component {
     }
 
     render() {
-        console.log("render TelInfon=List");
+        console.log("render TelInfoList");
         const { data, onDelete, onUpdate } = this.props;
         const list = data.map((info) => <TelInfo key={info.id} info={info} onDelete={onDelete} onUpdate={onUpdate} />);
+
         return <div>{list}</div>;
     }
 }
+export default TelInfoList;
